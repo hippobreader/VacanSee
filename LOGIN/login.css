@@ -15,7 +15,22 @@ body {
   width: 100%;
   max-width: 400px;
 }
-.btnlogin{
+.title{
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;                   
+  font-size: auto;                  
+  color: #000;                        
+  margin: 0;
+}
+#mainlogo {
+  width: 100px;
+  height: auto;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.btnlogin {
     background-color: #b02533;
     color: #ffffff;
     border: none;
@@ -29,7 +44,7 @@ body {
     margin-right: auto;
     padding: .4rem;
 }
-.btnSignup{
+.btnSignup {
     background-color: #b02533;
     color: #ffffff;
     border: none;
@@ -43,30 +58,41 @@ body {
     margin-right: auto;
     padding: .4rem;
 }
-.btnSignup:hover{
+.btnSignup:hover {
     background-color: rgb(82, 2, 2);
 }
-.btnlogin:hover{
+.btnlogin:hover {
     background-color: rgb(82, 2, 2);
 }
 
-.card {
+.mainlogo {
   background: #fff;
   padding: 30px 25px;
   border-radius: 10px;
   box-shadow: 0 2px 12px rgba(0,0,0,0.1);
   text-align: center;
 }
-
-
-.logo-text .red { 
-    color: #cf0000; font-weight: bold; 
+.logo {
+  display: flex;
+  align-items: center;  /* Aligns text and logo vertically */
+  justify-content: center; /* Centers them horizontally */
+  gap: auto;
 }
 
-.campus {
-  margin: 8px 0 20px;
+.forgot{
+  font-size: .7rem;
+}
+
+.logo-text {
+    font-size: 1rem;
+}
+.UNIVERSITY {
   color: #7f1d1d;
   font-weight: 600;
+  gap: 0px;
+  margin: 0;
+  line-height: 0;
+  text-align: center;
 }
 
 .form {
