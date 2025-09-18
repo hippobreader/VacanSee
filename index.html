@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VacanSee</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar">
+            <div class="nav-content">
+                <a href="index.html" class="logo">
+                    <i data-feather="home"></i> VacanSee
+                </a>
+                <div class="nav-links">
+                    <a href="login.html" class="nav-link">Login</a>
+                    <a href="register.html" class="nav-link">Register</a>
+                </div>
+                <button class="mobile-menu-btn">
+                    <i data-feather="menu"></i>
+                </button>
+            </div>
+        </nav>
+
+        <main class="main-content">
+            <div class="hero-section">
+                <h1 class="hero-title" data-aos="fade-up">
+                    VacanSee
+                </h1>
+                <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="100">
+                    Streamline your campus operations with our comprehensive management solution
+                </p>
+                
+                <div class="features-grid">
+                    <a href="google.com" class="feature-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="feature-icon faculty-icon">
+                            <i data-feather="user"></i>
+                        </div>
+                        <h3 class="feature-title">Faculty</h3>
+                        <p class="feature-description">Generate reports and update room availability</p>
+                    </a>
+                    
+                    <a href="google.com" class="feature-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="feature-icon student-icon">
+                            <i data-feather="users"></i>
+                        </div>
+                        <h3 class="feature-title">Students</h3>
+                        <p class="feature-description">View your dashboard and access resources</p>
+                    </a>
+                    
+                    <a href="youtube.com" class="feature-card" data-aos="fade-up" data-aos-delay="400">
+                        <div class="feature-icon admin-icon">
+                            <i data-feather="shield"></i>
+                        </div>
+                        <h3 class="feature-title">Admin</h3>
+                        <p class="feature-description">View reports and approve faculty submissions</p>
+                    </a>
+                </div>
+                
+                <div class="cta-section" data-aos="fade-up" data-aos-delay="500">
+                    <a href="login.php" class="cta-button">
+                        Get Started
+                        <i data-feather="arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <div class="footer-content">
+                <p>&copy; 2025 Campus Management System. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+    
+    <script>
+        AOS.init();
+        feather.replace();
+    </script>
+</body>
+</html>
