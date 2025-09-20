@@ -142,14 +142,28 @@ body {
     color: #3182ce;
 }
 
+.faculty-icon svg{
+    width: 60px;
+    height: 60px;
+}
+
 .student-icon {
     color: #38a169;
+}
+
+.student-icon svg{
+    width: 60px;
+    height: 60px;
 }
 
 .admin-icon {
     color: #805ad5;
 }
 
+.admin-icon svg{
+    width: 60px;
+    height: 60px;
+}
 .feature-title {
     font-size: 1.25rem;
     font-weight: 600;
