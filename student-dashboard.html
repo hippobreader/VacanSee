@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard - VacanSee</title>
+    <link rel="stylesheet" href="student-dashboard.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar">
+            <div class="nav-content">
+                <a href="index.html" class="logo">
+                    <i data-feather="home"></i> VacanSee
+                </a>
+                <div class="nav-links">
+                    <span class="user-info">Student Dashboard</span>
+                    <a href="index.html" class="nav-link">Logout</a>
+                </div>
+                <button class="mobile-menu-btn">
+                    <i data-feather="menu"></i>
+                </button>
+            </div>
+        </nav>
+
+        <main class="main-content">
+            <div class="dashboard-header" data-aos="fade-up">
+                <h1>Welcome, Student</h1>
+                <p>View room availability and campus information</p>
+            </div>
+
+            <div class="dashboard-grid">
+                <!-- Room Availability Card -->
+                <div class="dashboard-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card-header">
+                        <h3><i data-feather="map-pin"></i> Room Availability</h3>
+                    </div>
+                    <div class="card-content">
+                        <div class="room-list">
+                            <div class="room-item available">
+                                <span class="room-number">Room 101</span>
+                                <span class="room-status">Available</span>
+                                <span class="room-time">Until 3:00 PM</span>
+                            </div>
+                            <div class="room-item occupied">
+                                <span class="room-number">Room 102</span>
+                                <span class="room-status">Occupied</span>
+                                <span class="room-time">Until 4:30 PM</span>
+                            </div>
+                            <div class="room-item available">
+                                <span class="room-number">Room 103</span>
+                                <span class="room-status">Available</span>
+                                <span class="room-time">All Day</span>
+                            </div>
+                            <div class="room-item maintenance">
+                                <span class="room-number">Room 104</span>
+                                <span class="room-status">Maintenance</span>
+                                <span class="room-time">Until Tomorrow</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quick Stats Card -->
+                <div class="dashboard-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card-header">
+                        <h3><i data-feather="bar-chart-2"></i> Quick Stats</h3>
+                    </div>
+                    <div class="card-content">
+                        <div class="stats-grid">
+                            <div class="stat-item">
+                                <div class="stat-number">15</div>
+                                <div class="stat-label">Available Rooms</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">8</div>
+                                <div class="stat-label">Occupied Rooms</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">2</div>
+                                <div class="stat-label">Under Maintenance</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">25</div>
+                                <div class="stat-label">Total Rooms</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Schedule Card -->
+                <div class="dashboard-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card-header">
+                        <h3><i data-feather="calendar"></i> Today's Schedule</h3>
+                    </div>
+                    <div class="card-content">
+                        <div class="schedule-list">
+                            <div class="schedule-item">
+                                <div class="schedule-time">9:00 AM</div>
+                                <div class="schedule-details">
+                                    <div class="schedule-title">Mathematics Class</div>
+                                    <div class="schedule-location">Room 201</div>
+                                </div>
+                            </div>
+                            <div class="schedule-item">
+                                <div class="schedule-time">11:00 AM</div>
+                                <div class="schedule-details">
+                                    <div class="schedule-title">Physics Lab</div>
+                                    <div class="schedule-location">Lab 301</div>
+                                </div>
+                            </div>
+                            <div class="schedule-item">
+                                <div class="schedule-time">2:00 PM</div>
+                                <div class="schedule-details">
+                                    <div class="schedule-title">Computer Science</div>
+                                    <div class="schedule-location">Room 105</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Announcements Card -->
+                <div class="dashboard-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="card-header">
+                        <h3><i data-feather="bell"></i> Announcements</h3>
+                    </div>
+                    <div class="card-content">
+                        <div class="announcement-list">
+                            <div class="announcement-item">
+                                <div class="announcement-date">Today</div>
+                                <div class="announcement-text">Library will be closed for maintenance on Friday</div>
+                            </div>
+                            <div class="announcement-item">
+                                <div class="announcement-date">Yesterday</div>
+                                <div class="announcement-text">New study rooms available in Building C</div>
+                            </div>
+                            <div class="announcement-item">
+                                <div class="announcement-date">2 days ago</div>
+                                <div class="announcement-text">Campus WiFi upgrade completed successfully</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <div class="footer-content">
+                <p>© 2025 VacanSee - Campus Management System. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+    
+    <script>
+        AOS.init();
+        feather.replace();
+    </script>
+</body>
+</html>

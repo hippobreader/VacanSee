@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faculty Dashboard - VacanSee</title>
+    <link rel="stylesheet" href="faculty-dashboard.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar">
+            <div class="nav-content">
+                <a href="index.html" class="logo">
+                    <i data-feather="home"></i> VacanSee
+                </a>
+                <div class="nav-links">
+                    <span class="user-info">Faculty Dashboard</span>
+                    <a href="index.html" class="nav-link">Logout</a>
+                </div>
+                <button class="mobile-menu-btn">
+                    <i data-feather="menu"></i>
+                </button>
+            </div>
+        </nav>
+
+        <main class="main-content">
+            <div class="dashboard-header" data-aos="fade-up">
+                <h1>Welcome, Faculty</h1>
+                <p>Generate reports and manage room availability</p>
+            </div>
+
+            <div class="dashboard-grid">
+                <!-- Room Management Card -->
+                <div class="dashboard-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card-header">
+                        <h3><i data-feather="settings"></i> Room Management</h3>
+                    </div>
+                    <div class="card-content">
+                        <div class="room-controls">
+                            <div class="control-group">
+                                <label for="room-select">Select Room:</label>
+                                <select id="room-select" class="form-control">
+                                    <option value="">Choose a room</option>
+                                    <option value="101">Room 101</option>
+                                    <option value="102">Room 102</option>
+                                    <option value="103">Room 103</option>
+                                    <option value="104">Room 104</option>
+                                    <option value="105">Room 105</option>
+                                </select>
+                            </div>
+                            <div class="control-group">
+                                <label for="status-select">Update Status:</label>
+                                <select id="status-select" class="form-control">
+                                    <option value="available">Available</option>
+                                    <option value="occupied">Occupied</option>
+                                    <option value="maintenance">Maintenance</option>
+                                </select>
+                            </div>
+                            <div class="control-group">
+                                <label for="time-input">Duration:</label>
+                                <input type="time" id="time-input" class="form-control">
+                            </div>
+                            <button class="btn btn-primary">Update Room Status</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Code Generator Card -->
+                <div class="dashboard-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card-header">
+                        <h3><i data-feather="code"></i> Access Code Generator</h3>
+                    </div>
+                    <div class="card-content">
+                        <div class="code-generator">
+                            <div class="control-group">
+                                <label for="room-code-select">Room:</label>
+                                <select id="room-code-select" class="form-control">
+                                    <option value="">Select room</option>
+                                    <option value="101">Room 101</option>
+                                    <option value="102">Room 102</option>
+                                    <option value="103">Room 103</option>
+                                </select>
+                            </div>
+                            <div class="control-group">
+                                <label for="code-duration">Code Duration:</label>
+                                <select id="code-duration" class="form-control">
+                                    <option value="1">1 Hour</option>
+                                    <option value="2">2 Hours</option>
+                                    <option value="4">4 Hours</option>
+                                    <option value="8">8 Hours</option>
+                                    <option value="24">24 Hours</option>
+                                </select>
+                            </div>
+                            <button class="btn btn-success">Generate Access Code</button>
+                            <div class="generated-code">
+                                <div class="code-display">
+                                    <span class="code-label">Generated Code:</span>
+                                    <span class="code-value" id="access-code">ABC123</span>
+                                    <button class="btn-copy" onclick="copyCode()">
+                                        <i data-feather="copy"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- My Submissions Card -->
+                <div class="dashboard-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card-header">
+                        <h3><i data-feather="file-text"></i> My Submissions</h3>
+                    </div>
+                    <div class="card-content">
+                        <div class="submissions-list">
+                            <div class="submission-item pending">
+                                <div class="submission-info">
+                                    <div class="submission-title">Room 101 Maintenance Request</div>
+                                    <div class="submission-date">Submitted: Dec 20, 2024</div>
+                                </div>
+                                <span class="submission-status">Pending</span>
+                            </div>
+                            <div class="submission-item approved">
+                                <div class="submission-info">
+                                    <div class="submission-title">Room 103 Equipment Update</div>
+                                    <div class="submission-date">Submitted: Dec 18, 2024</div>
+                                </div>
+                                <span class="submission-status">Approved</span>
+                            </div>
+                            <div class="submission-item rejected">
+                                <div class="submission-info">
+                                    <div class="submission-title">Room 105 Schedule Change</div>
+                                    <div class="submission-date">Submitted: Dec 15, 2024</div>
+                                </div>
+                                <span class="submission-status">Rejected</span>
+                            </div>
+                        </div>
+                        <button class="btn btn-outline">View All Submissions</button>
+                    </div>
+                </div>
+
+                <!-- Quick Actions Card -->
+                <div class="dashboard-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="card-header">
+                        <h3><i data-feather="zap"></i> Quick Actions</h3>
+                    </div>
+                    <div class="card-content">
+                        <div class="quick-actions">
+                            <button class="action-btn">
+                                <i data-feather="plus"></i>
+                                <span>Submit New Request</span>
+                            </button>
+                            <button class="action-btn">
+                                <i data-feather="download"></i>
+                                <span>Generate Report</span>
+                            </button>
+                            <button class="action-btn">
+                                <i data-feather="calendar"></i>
+                                <span>Schedule Room</span>
+                            </button>
+                            <button class="action-btn">
+                                <i data-feather="alert-circle"></i>
+                                <span>Report Issue</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <div class="footer-content">
+                <p>© 2025 VacanSee - Campus Management System. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+    
+    <script>
+        AOS.init();
+        feather.replace();
+        
+        function copyCode() {
+            const codeValue = document.getElementById('access-code').textContent;
+            navigator.clipboard.writeText(codeValue).then(() => {
+                alert('Code copied to clipboard!');
+            });
+        }
+    </script>
+</body>
+</html>

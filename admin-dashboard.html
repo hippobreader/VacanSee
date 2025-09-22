@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - VacanSee</title>
+    <link rel="stylesheet" href="admin-dashboard.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar">
+            <div class="nav-content">
+                <a href="index.html" class="logo">
+                    <i data-feather="home"></i> VacanSee
+                </a>
+                <div class="nav-links">
+                    <span class="user-info">Admin Dashboard</span>
+                    <a href="index.html" class="nav-link">Logout</a>
+                </div>
+                <button class="mobile-menu-btn">
+                    <i data-feather="menu"></i>
+                </button>
+            </div>
+        </nav>
+
+        <main class="main-content">
+            <div class="dashboard-header" data-aos="fade-up">
+                <h1>Welcome, Administrator</h1>
+                <p>Manage system reports and approve faculty submissions</p>
+            </div>
+
+            <div class="dashboard-grid">
+                <!-- System Overview Card -->
+                <div class="dashboard-card wide-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card-header">
+                        <h3><i data-feather="activity"></i> System Overview</h3>
+                    </div>
+                    <div class="card-content">
+                        <div class="overview-stats">
+                            <div class="stat-box">
+                                <div class="stat-icon users-icon">
+                                    <i data-feather="users"></i>
+                                </div>
+                                <div class="stat-info">
+                                    <div class="stat-number">1,247</div>
+                                    <div class="stat-label">Total Users</div>
+                                </div>
+                            </div>
+                            <div class="stat-box">
+                                <div class="stat-icon rooms-icon">
+                                    <i data-feather="grid"></i>
+                                </div>
+                                <div class="stat-info">
+                                    <div class="stat-number">85</div>
+                                    <div class="stat-label">Total Rooms</div>
+                                </div>
+                            </div>
+                            <div class="stat-box">
+                                <div class="stat-icon requests-icon">
+                                    <i data-feather="file-text"></i>
+                                </div>
+                                <div class="stat-info">
+                                    <div class="stat-number">23</div>
+                                    <div class="stat-label">Pending Requests</div>
+                                </div>
+                            </div>
+                            <div class="stat-box">
+                                <div class="stat-icon active-icon">
+                                    <i data-feather="zap"></i>
+                                </div>
+                                <div class="stat-info">
+                                    <div class="stat-number">67</div>
+                                    <div class="stat-label">Active Sessions</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pending Approvals Card -->
+                <div class="dashboard-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card-header">
+                        <h3><i data-feather="clock"></i> Pending Approvals</h3>
+                        <span class="badge">5</span>
+                    </div>
+                    <div class="card-content">
+                        <div class="approvals-list">
+                            <div class="approval-item">
+                                <div class="approval-info">
+                                    <div class="approval-title">Room 201 Maintenance</div>
+                                    <div class="approval-submitter">By: Dr. Smith</div>
+                                    <div class="approval-date">2 hours ago</div>
+                                </div>
+                                <div class="approval-actions">
+                                    <button class="btn btn-approve">
+                                        <i data-feather="check"></i>
+                                    </button>
+                                    <button class="btn btn-reject">
+                                        <i data-feather="x"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="approval-item">
+                                <div class="approval-info">
+                                    <div class="approval-title">Equipment Update Request</div>
+                                    <div class="approval-submitter">By: Prof. Johnson</div>
+                                    <div class="approval-date">4 hours ago</div>
+                                </div>
+                                <div class="approval-actions">
+                                    <button class="btn btn-approve">
+                                        <i data-feather="check"></i>
+                                    </button>
+                                    <button class="btn btn-reject">
+                                        <i data-feather="x"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="approval-item">
+                                <div class="approval-info">
+                                    <div class="approval-title">Schedule Change Request</div>
+                                    <div class="approval-submitter">By: Dr. Wilson</div>
+                                    <div class="approval-date">6 hours ago</div>
+                                </div>
+                                <div class="approval-actions">
+                                    <button class="btn btn-approve">
+                                        <i data-feather="check"></i>
+                                    </button>
+                                    <button class="btn btn-reject">
+                                        <i data-feather="x"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="btn btn-outline">View All Requests</button>
+                    </div>
+                </div>
+
+                <!-- Reports Card -->
+                <div class="dashboard-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card-header">
+                        <h3><i data-feather="bar-chart"></i> Reports & Analytics</h3>
+                    </div>
+                    <div class="card-content">
+                        <div class="reports-section">
+                            <div class="report-item">
+                                <div class="report-info">
+                                    <div class="report-title">Room Utilization Report</div>
+                                    <div class="report-description">Weekly usage statistics</div>
+                                </div>
+                                <button class="btn btn-download">
+                                    <i data-feather="download"></i>
+                                </button>
+                            </div>
+                            <div class="report-item">
+                                <div class="report-info">
+                                    <div class="report-title">Faculty Activity Report</div>
+                                    <div class="report-description">Monthly submission summary</div>
+                                </div>
+                                <button class="btn btn-download">
+                                    <i data-feather="download"></i>
+                                </button>
+                            </div>
+                            <div class="report-item">
+                                <div class="report-info">
+                                    <div class="report-title">System Performance Report</div>
+                                    <div class="report-description">System health metrics</div>
+                                </div>
+                                <button class="btn btn-download">
+                                    <i data-feather="download"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="chart-placeholder">
+                            <div class="chart-title">Room Usage Trends</div>
+                            <div class="chart-content">
+                                <div class="chart-bar" style="height: 60%;">
+                                    <span class="bar-label">Mon</span>
+                                </div>
+                                <div class="chart-bar" style="height: 80%;">
+                                    <span class="bar-label">Tue</span>
+                                </div>
+                                <div class="chart-bar" style="height: 45%;">
+                                    <span class="bar-label">Wed</span>
+                                </div>
+                                <div class="chart-bar" style="height: 75%;">
+                                    <span class="bar-label">Thu</span>
+                                </div>
+                                <div class="chart-bar" style="height: 90%;">
+                                    <span class="bar-label">Fri</span>
+                                </div>
+                                <div class="chart-bar" style="height: 30%;">
+                                    <span class="bar-label">Sat</span>
+                                </div>
+                                <div class="chart-bar" style="height: 20%;">
+                                    <span class="bar-label">Sun</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- User Management Card -->
+                <div class="dashboard-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="card-header">
+                        <h3><i data-feather="user-plus"></i> User Management</h3>
+                    </div>
+                    <div class="card-content">
+                        <div class="user-stats">
+                            <div class="user-stat-item">
+                                <div class="user-stat-number">856</div>
+                                <div class="user-stat-label">Students</div>
+                            </div>
+                            <div class="user-stat-item">
+                                <div class="user-stat-number">124</div>
+                                <div class="user-stat-label">Faculty</div>
+                            </div>
+                            <div class="user-stat-item">
+                                <div class="user-stat-number">12</div>
+                                <div class="user-stat-label">Admins</div>
+                            </div>
+                        </div>
+                        <div class="user-actions">
+                            <button class="action-btn">
+                                <i data-feather="user-plus"></i>
+                                <span>Add User</span>
+                            </button>
+                            <button class="action-btn">
+                                <i data-feather="users"></i>
+                                <span>Manage Users</span>
+                            </button>
+                            <button class="action-btn">
+                                <i data-feather="settings"></i>
+                                <span>User Settings</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <div class="footer-content">
+                <p>© 2025 VacanSee - Campus Management System. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+    
+    <script>
+        AOS.init();
+        feather.replace();
+        
+        // Approval actions
+        document.querySelectorAll('.btn-approve').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const item = this.closest('.approval-item');
+                item.style.backgroundColor = '#f0fff4';
+                item.style.borderLeft = '4px solid #38a169';
+                this.style.display = 'none';
+                this.nextElementSibling.style.display = 'none';
+            });
+        });
+        
+        document.querySelectorAll('.btn-reject').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const item = this.closest('.approval-item');
+                item.style.backgroundColor = '#fed7d7';
+                item.style.borderLeft = '4px solid #e53e3e';
+                this.style.display = 'none';
+                this.previousElementSibling.style.display = 'none';
+            });
+        });
+    </script>
+</body>
+</html>
